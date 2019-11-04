@@ -597,51 +597,54 @@ In this exercise, you will create a release pipeline in Azure DevOps that perfor
 
 8.  This brings up the task editor and opens a panel with configuration details for the dev stage we created earlier. The configuration items set here will be made available to the tasks in this stage.
 
-9.  On this panel, we first need to configure the necessary details to connect the task to Azure for deployment. Let's first start by connecting to our Azure subscription. Select your Azure subscription from the "Azure subscription" dropdown and then choose the **Authorize** button to login and authenticate to the selected subscription.
+9.  On this panel, we first need to configure the necessary details to connect the task to Azure for deployment. Let's first start by connecting to our Azure subscription. Select the Advanced options.
 
-    ![On the panel, Azure subscription is highlighted along with the Authorize button.](images/stepbystep/media/image89b.png "Parameters")
+    ![On the panel, Azure subscription is highlighted along with the Authorize button.](images/stepbystep/media/authorise01.png "Parameters")
+    
+10. Enter connection name, choose the scope **Subscription** then select **TailspinToysRG-uniqueid** resource group and click on OK button. 
+    ![On the panel, Azure subscription is highlighted along with the Authorize button.](images/stepbystep/media/authorise02.png "Parameters")
 
-10. Then, in the "App service name field" select the one that begins with **tailspintoys-dev-**.
+11. Then, in the "App service name field" select the one that begins with **tailspintoys-dev-**.
 
     ![On the panel, App service name is highlighted.](images/stepbystep/media/image89c.png "Service connections")
 
-11. Now, let's configure the task specific details. Select the "Deploy Azure App Service" task to bring up the configuration panel for task.
+12. Now, let's configure the task specific details. Select the "Deploy Azure App Service" task to bring up the configuration panel for task.
 
     ![On the screen, Deploy Azure App Service is highlighted.](images/stepbystep/media/image89d.png "Deploy Azure App Service")
 
-12. In a previous exercise, we created a deployment slot for the web app. Deployment slots are actually live apps with their own hostnames. App content and configuration elements can be swapped between two deployment slots, including the production slot. In the "Azure App Service Deploy" panel, locate the **Deploy to Slot or App Service Environment** checkbox and set it to checked.
+13. In a previous exercise, we created a deployment slot for the web app. Deployment slots are actually live apps with their own hostnames. App content and configuration elements can be swapped between two deployment slots, including the production slot. In the "Azure App Service Deploy" panel, locate the **Deploy to Slot or App Service Environment** checkbox and set it to checked.
 
     ![On the panel, Deploy to slot is highlighted.](images/stepbystep/media/image89e.png "Azure App Service Deploy")
 
-13. The checkbox will trigger the panel to update with additional configuration items. In the **Resource group** dropdown, select the appropriate resource group you created in the previous exercise. In the **Slot** dropdown, select **staging**.
+14. The checkbox will trigger the panel to update with additional configuration items. In the **Resource group** dropdown, select the appropriate resource group you created in the previous exercise. In the **Slot** dropdown, select **staging**.
 
     ![On the panel, Resource group and Slot are highlighted.](images/stepbystep/media/image89f.png "Deployment slot configuration")
 
-14. Now that we've completed the configuration for the "Deploy Azure App Service" task to deploy our application to Azure App Service deployment slot, we'll need a way to swap the staging slot with the production slot. To do that, we'll need to add an additional task to the dev stage. Select the **+** (plus sign) on the task list to create a new task.
+15. Now that we've completed the configuration for the "Deploy Azure App Service" task to deploy our application to Azure App Service deployment slot, we'll need a way to swap the staging slot with the production slot. To do that, we'll need to add an additional task to the dev stage. Select the **+** (plus sign) on the task list to create a new task.
 
     ![On the screen, the plus sign is highlighted.](images/stepbystep/media/image89g.png "Task list")
 
-15. This opens the "Add tasks" panel. Enter **App Service Manage** into the search box and press **Enter**. Then select the **Azure App Service Manage** task from the search results and select the **Add** button.
+16. This opens the "Add tasks" panel. Enter **App Service Manage** into the search box and press **Enter**. Then select the **Azure App Service Manage** task from the search results and select the **Add** button.
 
     ![On the panel, App Service Manage is entered into the search textbox and Azure App Service Manage is highlighted.](images/stepbystep/media/image90.png "Add tasks")
 
-16. After adding the new task, we now have two tasks for the dev stage. The new task now needs to be configured. Select the **Swap Slots:** task to open the task configuration panel.
+17. After adding the new task, we now have two tasks for the dev stage. The new task now needs to be configured. Select the **Swap Slots:** task to open the task configuration panel.
 
     ![On the screen, the Swap Slots task is highlighted.](images/stepbystep/media/image91.png "Task list")
 
-17. In the "Azure App Service Manage" task panel there are a few configurations we need to set. First, locate the "Azure subscription" field and select the same subscription used in the "Deploy Azure App Service" task.
+18. In the "Azure App Service Manage" task panel there are a few configurations we need to set. First, locate the "Azure subscription" field and select the same subscription used in the "Deploy Azure App Service" task.
 
-18. Locate the "App Service name" field, select the item that begins with **TailspinToysWeb-dev-** just like in the "Deploy Azure App Service" task. In the "Resource Group" field, select **TailspinToys-dev**. In the "Source Slot" field, select **staging**.
+19. Locate the "App Service name" field, select the item that begins with **TailspinToysWeb-dev-** just like in the "Deploy Azure App Service" task. In the "Resource Group" field, select **TailspinToys-dev**. In the "Source Slot" field, select **staging**.
 
     ![On the panel, App Service name, Resource group, and Source Slot are all highlighted.](images/stepbystep/media/image92.png "Swap Slots task configuration")
 
-19. Let's wrap up this activity by giving our release pipeline a new name. Choose the existing "New release pipeline" name to begin editing it. Change the name to "TailspinToys Release".
+20. Let's wrap up this activity by giving our release pipeline a new name. Choose the existing "New release pipeline" name to begin editing it. Change the name to "TailspinToys Release".
 
     ![On the screen, TailspinToys Release name is highlighted.](images/stepbystep/media/image92a.png "Release pipeline name change")
 
-20. Select "Save" button at the top of the screen and confirm by clicking the "OK" button.
+21. Select "Save" button at the top of the screen and confirm by clicking the "OK" button.
 
-21. Congratulations! You have just created your first release pipeline.
+22. Congratulations! You have just created your first release pipeline.
 
 ### Task 2: Add test and production environments to release pipeline
 
