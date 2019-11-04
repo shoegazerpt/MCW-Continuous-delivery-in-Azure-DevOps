@@ -602,6 +602,7 @@ In this exercise, you will create a release pipeline in Azure DevOps that perfor
     ![On the panel, Azure subscription is highlighted along with the Authorize button.](images/stepbystep/media/authorise01.png "Parameters")
     
 10. Enter connection name, choose the scope **Subscription** then select **TailspinToysRG-uniqueid** resource group and click on OK button. 
+
     ![On the panel, Azure subscription is highlighted along with the Authorize button.](images/stepbystep/media/authorise02.png "Parameters")
 
 11. Then, in the "App service name field" select the one that begins with **tailspintoys-dev-**.
