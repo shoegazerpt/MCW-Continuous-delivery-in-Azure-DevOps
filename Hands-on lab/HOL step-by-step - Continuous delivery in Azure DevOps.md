@@ -556,7 +556,13 @@ Tasks are the building blocks of a pipeline. They describe the actions that are 
 15.  After the build process completes, you should see a green check mark next to each of the build pipeline steps.
   
   ![A screen that shows a successfully completed build pipeline.](images/stepbystep/media/image77.png "Success") 
-    
+  
+   ```
+     Note: If pipeline build fails, please make following changes and run the build again.
+     Delete package.json.lock in clientapp folder.
+	   Change from rxjs: "^6.0.0" to rxjs: "6.0.0" at package.json in the same folder.
+     ```
+     
   Congratulations! You have just created your first build pipeline. In the next exercise, we will create a release pipeline that deploys your successful builds.
 
 ## Exercise 4: Create Azure DevOps release pipeline
