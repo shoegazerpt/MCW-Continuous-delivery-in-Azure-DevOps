@@ -184,11 +184,10 @@ Now that the template file has been uploaded, we'll deploy it several times to c
     read resourceGroupName &&
     echo "Enter the location (i.e. westus, centralus, eastus):" &&
     read location &&
-    az group create --name $resourceGroupName --location "$location" &&
-    az group deployment create --resource-group $resourceGroupName --template-file "$HOME/studentfiles/armtemplate/azuredeploy.json"
+      az group deployment create --resource-group $resourceGroupName --template-file "$HOME/studentfiles/armtemplate/azuredeploy.json"
     ```
     
-    >**Note**: This command is designed to prompt us to enter the resource group name and Azure region (location) we want to deploy our resources to. The script then takes our inputs and passes them as parameters to the Azure CLI command that calls our recently uploaded template file.
+    >**Note**: This command is designed to prompt us to enter the existing resource group name (TailspinToysRG-userId) and Azure region (location) we want to deploy our resources to. The script then takes our inputs and passes them as parameters to the Azure CLI command that calls our recently uploaded template file.
 
     ![In the Azure Cloud Shell window, the command has been entered is we are prompted for the name of the resource group we want to deploy to.](images/stepbystep/media/image44.png "Azure Cloud Shell window")
 
