@@ -49,10 +49,6 @@ In this lab, you will configure a developer environment and download the require
 
 ### Prerequisites
 
--   Microsoft Azure subscription <http://azure.microsoft.com/en-us/pricing/free-trial/>
-
->**Note**: If you meet both of the above requirements, skip to Task 2 below.
-
 ### Task 1: Use Azure Shell as your development environment
 
 >**Note**: This workshop can be completed using only the Azure Cloud Shell.
