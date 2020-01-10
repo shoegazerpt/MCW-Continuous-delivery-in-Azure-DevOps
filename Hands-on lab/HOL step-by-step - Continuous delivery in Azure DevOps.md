@@ -31,12 +31,8 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
   - [Solution architecture](#solution-architecture)
   - [Requirements](#requirements)
   - [Exercise 1: Create an Azure Resource Manager (ARM) template that can provision the web application, PostgreSQL database, and deployment slots in a single automated process](#exercise-1-create-an-azure-resource-manager-arm-template-that-can-provision-the-web-application-postgresql-database-and-deployment-slots-in-a-single-automated-process)
-    - [Task 1: Create an Azure Resource Manager (ARM) template using Azure Cloud Shell](#task-1-create-an-azure-resource-manager-arm-template-using-azure-cloud-shell)
-    - [Task 2: Configure the list of release environments parameters](#task-2-configure-the-list-of-release-environments-parameters)
-    - [Task 3: Add a deployment slot for the "staging" version of the site](#task-3-add-a-deployment-slot-for-the-%22staging%22-version-of-the-site)
-    - [Task 4: Create the dev environment and deploy the template to Azure](#task-4-create-the-dev-environment-and-deploy-the-template-to-azure)
-    - [Task 5: Create the test environment and deploy the template to Azure](#task-5-create-the-test-environment-and-deploy-the-template-to-azure)
-    - [Task 6: Create the production environment and deploy the template to Azure](#task-6-create-the-production-environment-and-deploy-the-template-to-azure)
+    - [Task 1: Verify resources are created](#task-1-verify-resources-are-created)
+
   - [Exercise 2: Create Azure DevOps project and Git Repository](#exercise-2-create-azure-devops-project-and-git-repository)
     - [Task 1: Create Azure DevOps Account](#task-1-create-azure-devops-account)
     - [Task 2: Add the Tailspin Toys source code repository to Azure DevOps](#task-2-add-the-tailspin-toys-source-code-repository-to-azure-devops)
@@ -101,9 +97,9 @@ Since this solution is based on Azure Platform-as-a-Service (PaaS) technology, i
 
 In the Azure Portal, navigate to the resource group where all of the resources have been deployed. It should look similar to the screenshot below.
 
-    >**Note**: The specific names of the resources will be slightly different than what you see in the screenshot based on the unique identities assigned.
+**Note**: The specific names of the resources will be slightly different than what you see in the screenshot based on the unique identities assigned.
 
-    ![The Azure Portal is showing all the deployed resources for the resource group we have been using.](images/stepbystep/media/image51.png "Azure Cloud Shell")
+![The Azure Portal is showing all the deployed resources for the resource group we have been using.](images/stepbystep/media/image51.png)
 
 ## Exercise 2: Create Azure DevOps project and Git Repository
 
