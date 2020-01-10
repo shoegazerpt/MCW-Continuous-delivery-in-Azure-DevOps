@@ -12,6 +12,7 @@
         "administratorLogin": {
             "type": "string",
             "minLength": 1,
+            "defaultValue": "sqluser",
             "metadata": {
                 "description": "Database administrator login name"
             }
@@ -20,6 +21,7 @@
             "type": "securestring",
             "minLength": 8,
             "maxLength": 128,
+            "defaultValue": "sqlP@ssw0rd",
             "metadata": {
                 "description": "Database administrator password"
             }
