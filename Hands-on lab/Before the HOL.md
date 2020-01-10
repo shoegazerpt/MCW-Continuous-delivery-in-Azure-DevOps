@@ -72,6 +72,8 @@ In this lab, you will configure a developer environment and download the require
     curl -o studentfiles.zip https://cloudworkshop.blob.core.windows.net/agile-continous-delivery/studentfiles.zip
     ```
 
+    **TBD: Add curl to download armtemplate ready to use**
+
 2.  Extract the contents of the file to the new folder. Using the Azure Cloud Shell, you can execute the following command inside the Cloud Shell window:
 
     ```bash

@@ -369,6 +369,12 @@ In this Task, you will configure the Azure DevOps Git repository. You will confi
     git init
     ```
 
+
+Generate credentials
+![](2020-01-10-12-22-09.png)
+
+
+
 4.  Paste the first command you copied from Azure DevOps. It will resemble the command below:
     
     ```
