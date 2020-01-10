@@ -9,4 +9,4 @@ templateUri=https://raw.githubusercontent.com/shoegazerpt/MCW-Continuous-deliver
 echo ""
 echo "Provisioning test and production environments..."
 
-az group deployment create --resource-group $rgName --template-uri $templateUri --parameters "{\"environment\":{\"value\":\"test\"}}" && az group deployment create --resource-group $resourceGroupName --template-uri $templateUri --parameters "{\"environment\":{\"value\":\"production\"}}" 
+az group deployment create --resource-group $rgName --template-uri $templateUri --parameters "{\"environment\":{\"value\":\"test\"}}" & az group deployment create --resource-group $rgName --template-uri $templateUri --parameters "{\"environment\":{\"value\":\"production\"}}" 
