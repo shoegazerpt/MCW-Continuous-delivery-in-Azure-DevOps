@@ -4,7 +4,9 @@ curl -o studentfiles.zip https://cloudworkshop.blob.core.windows.net/agile-conti
 unzip studentfiles.zip
 
 rgName=${1:-$(az group list --query [0].name -o tsv)}
-rgLocation=${2:-$(az group list --query [0].location -o tsv)}
-templateFile=https://raw.githubusercontent.com/shoegazerpt/MCW-Serverless-architecture/btf2020/Hands-on%20lab/deploy/azureDeploy.json
+templateUri=https://raw.githubusercontent.com/shoegazerpt/MCW-Serverless-architecture/btf2020/Hands-on%20lab/deploy/azureDeploy.json
 
-az group deployment create --resource-group $resourceGroupName --template-file "$HOME/studentfiles/armtemplate/azuredeploy.json"
+echo ""
+echo "Provisioning test and production environments..."
+
+az group deployment create --resource-group $rgName --template-uri $templateUri --parameters "{\"environment\":{\"value\":\"test\"}" && az group deployment create --resource-group $resourceGroupName --template-uri $templateUri --parameters "{\"environment\":{\"value\":\"production\"}" 
