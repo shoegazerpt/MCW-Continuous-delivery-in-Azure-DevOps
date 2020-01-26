@@ -157,32 +157,42 @@ In this Task, you will configure the Azure DevOps Git repository. You will confi
     git init
     ```
 
+4. Initialize your git user info (replace with correct values)
 
-Generate credentials
+    ```
+    git config --global user.email "you@example.com"
+
+    git config --global user.name "Your Name"
+
+    ```
+5. Clikc Generate Git Credentials
+
+![](2020-01-26-02-15-11.png)
+
+6. **Copy the password**, you'll need it later
+
 ![](2020-01-10-12-22-09.png)
 
-
-
-4.  Paste the first command you copied from Azure DevOps. It will resemble the command below:
+6.  Paste the first command you copied from Azure DevOps. It will resemble the command below:
     
     ```
     git remote add origin https://<your-org>@dev.azure.com/<your-org>/TailspinToys/_git/TailspinToys
     ```
 
-5.  Enter the following commands to commit the changes made locally to the new repository:
+7.  Enter the following commands to commit the changes made locally to the new repository:
     
     ```
     git add *
     git commit -m "adding files"
     ```
 
-6.  Push the changes up to the Azure DevOps repository with the following command:
+8.  Push the changes up to the Azure DevOps repository with the following command:
 
     ```
     git push -u origin --all
     ```
 
-7.  Leave that command prompt window open and switch back to the web browser window for Azure DevOps from the previous Task. Navigate to the Repos > Files page which shows the files in the repository. You may need to refresh the page to see the updated files. Your source code is now appearing in Azure DevOps.
+9.  Leave that command prompt window open and switch back to the web browser window for Azure DevOps from the previous Task. Navigate to the Repos > Files page which shows the files in the repository. You may need to refresh the page to see the updated files. Your source code is now appearing in Azure DevOps.
 
 ## Exercise 3: Create Azure DevOps build pipeline
 
