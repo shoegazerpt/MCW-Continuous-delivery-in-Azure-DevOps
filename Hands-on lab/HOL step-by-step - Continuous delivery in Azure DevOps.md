@@ -275,6 +275,10 @@ Tasks are the building blocks of a pipeline. They describe the actions that are 
       inputs:
         restoreSolution: 'tailspintoysweb/tailspintoysweb.csproj'
 
+    - task: UseNode@1
+      inputs:
+      version: '8.16.0'
+
     - task: VSBuild@1
       displayName: 'Build solution'
       inputs:
@@ -313,6 +317,10 @@ Tasks are the building blocks of a pipeline. They describe the actions that are 
       displayName: 'Use NuGet 4.4.1'
       inputs:
         versionSpec: 4.4.1
+
+    - task: UseNode@1
+      inputs:
+        version: '8.16.0'
 
     - task: NuGetCommand@2
       displayName: 'NuGet restore'
